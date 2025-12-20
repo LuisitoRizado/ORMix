@@ -1,0 +1,2 @@
+com\luisitorizado\orm\App.class
+com\luisitorizado\connection\ORMixPostgresSQLConnection.class
