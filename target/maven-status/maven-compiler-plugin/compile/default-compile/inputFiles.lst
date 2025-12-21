@@ -1,3 +1,10 @@
-C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\connection\ORMixPostgresSQLConnection.java
+C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\connection\ConnectionFactory.java
+C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\connection\DBConfig.java
+C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\connection\IDBConnection.java
+C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\connection\mysql\MySqlConnector.java
+C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\connection\postgres\PostgresConnector.java
 C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\connection\test.java
 C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\orm\App.java
+C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\queries\query\QueryStatement.java
+C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\queries\QueryBuilder.java
+C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\queries\QueryBuilderContract.java

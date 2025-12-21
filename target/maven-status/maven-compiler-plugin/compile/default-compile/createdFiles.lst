@@ -1,2 +1,9 @@
 com\luisitorizado\orm\App.class
-com\luisitorizado\connection\ORMixPostgresSQLConnection.class
+com\luisitorizado\queries\query\QueryStatement.class
+com\luisitorizado\connection\postgres\PostgresConnector.class
+com\luisitorizado\connection\DBConfig.class
+com\luisitorizado\connection\mysql\MySqlConnector.class
+com\luisitorizado\connection\IDBConnection.class
+com\luisitorizado\queries\QueryBuilder.class
+com\luisitorizado\queries\QueryBuilderContract.class
+com\luisitorizado\connection\ConnectionFactory.class

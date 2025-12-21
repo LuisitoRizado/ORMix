@@ -1,21 +1,20 @@
 package com.luisitorizado.orm;
 
 import java.sql.Statement;
+import java.util.Timer;
 
-import com.luisitorizado.connection.ORMixPostgresSQLConnection;
+import com.luisitorizado.connection.ConnectionFactory;
+import com.luisitorizado.connection.DBConfig;
+import com.luisitorizado.connection.IDBConnection;
+import com.luisitorizado.connection.postgres.PostgresConnector;
+import com.luisitorizado.queries.query.QueryStatement;
 
-/**
- * Hello world!
- *
- */
+ 
 public class App {
     public static void main(String[] args) {
-        ORMixPostgresSQLConnection connection = ORMixPostgresSQLConnection.getInstance("localhost", 5432,
-                "smartparkinglot", "postgres", "root");
-        IO.println("Conexxion: " + connection.getJdbcUrl());
-        //Abrir la conexion: 
-        IO.println(connection.OpenConnection());
-        connection.OpenConnection();
-        IO.println("Este es el inicio del ORM");
+        DBConfig dbConfig = new DBConfig("localhost", 5432, "smartparkinglot", "postgres", "root");
+        IDBConnection connection = ConnectionFactory.getConnection("postgres", dbConfig);
+        //Realizar la conexion
+        connection.connect();
     }
 }
