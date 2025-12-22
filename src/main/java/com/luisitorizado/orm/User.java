@@ -8,7 +8,6 @@ import com.luisitorizado.annotations.Table;
 @Entity
 @Table(name = "users")
 public class User {
-    @Id
     @Column(name = "id")
     private long id;
 
@@ -17,4 +16,29 @@ public class User {
 
     @Column(name = "email")
     private String email;
+
+    // Getters and setters
+    public long getId() {
+        return this.id;
+    }
+
+    public void setId(long newId) {
+        this.id = newId;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setEmail(String newEmail) {
+        this.email = newEmail;
+    }
 }

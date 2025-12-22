@@ -10,6 +10,7 @@ import com.luisitorizado.connection.ConnectionFactory;
 import com.luisitorizado.connection.DBConfig;
 import com.luisitorizado.connection.IDBConnection;
 import com.luisitorizado.connection.postgres.PostgresConnector;
+import com.luisitorizado.core.EntityManager;
 import com.luisitorizado.queries.query.QueryStatement;
 
 public class App {
@@ -19,17 +20,12 @@ public class App {
         // Realizar la conexion
         connection.connect();
 
-        Class<?> clazz = User.class;
-    
-        Table table = clazz.getAnnotation(Table.class);
-        String tableName = table.name();
-
-        for (Field field : clazz.getDeclaredFields()) {
-            if (field.isAnnotationPresent(Column.class)) {
-                Column column = field.getAnnotation(Column.class);
-                System.out.println(column.name());
-            }
-        }
-
+        EntityManager em = new EntityManager();
+        User user = new User();
+        user.setId(100);
+        user.setEmail("laog.sonic4@gmail.com");
+        user.setName("Luis Olivares");
+        IO.println("Consulta de findById");
+        em.findById(User.class, user.getId());
     }
 }
