@@ -1,3 +1,7 @@
+C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\annotations\Column.java
+C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\annotations\Entity.java
+C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\annotations\Id.java
+C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\annotations\Table.java
 C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\connection\ConnectionFactory.java
 C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\connection\DBConfig.java
 C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\connection\IDBConnection.java
@@ -5,6 +9,7 @@ C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\connection\m
 C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\connection\postgres\PostgresConnector.java
 C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\connection\test.java
 C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\orm\App.java
+C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\orm\User.java
 C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\queries\query\QueryStatement.java
 C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\queries\QueryBuilder.java
 C:\Users\DELL\Documents\ORMix\ormix\src\main\java\com\luisitorizado\queries\QueryBuilderContract.java
