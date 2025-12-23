@@ -20,12 +20,13 @@ public class App {
         // Realizar la conexion
         connection.connect();
 
-        EntityManager em = new EntityManager();
+        EntityManager em = new EntityManager(connection);
         User user = new User();
         user.setId(100);
         user.setEmail("laog.sonic4@gmail.com");
         user.setName("Luis Olivares");
         IO.println("Consulta de findById");
-        em.findById(User.class, user.getId());
+        em.findAll(User.class, user.getId());
+        em.findById(User.class, user);
     }
 }

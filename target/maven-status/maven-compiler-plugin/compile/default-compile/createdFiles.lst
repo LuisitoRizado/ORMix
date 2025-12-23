@@ -12,4 +12,5 @@ com\luisitorizado\connection\postgres\PostgresConnector.class
 com\luisitorizado\annotations\Entity.class
 com\luisitorizado\connection\mysql\MySqlConnector.class
 com\luisitorizado\core\EntityManager.class
+com\luisitorizado\utils\ReflectionUtils.class
 com\luisitorizado\connection\ConnectionFactory.class

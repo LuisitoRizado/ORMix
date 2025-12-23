@@ -8,6 +8,8 @@ import com.luisitorizado.annotations.Table;
 @Entity
 @Table(name = "users")
 public class User {
+    
+    @Id(name = "id")
     @Column(name = "id")
     private long id;
 

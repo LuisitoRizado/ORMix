@@ -1,37 +1,42 @@
 package com.luisitorizado.core;
 
 import java.lang.reflect.Field;
+import java.util.List;
 
 import com.luisitorizado.annotations.Column;
 import com.luisitorizado.annotations.Id;
 import com.luisitorizado.annotations.Table;
+import com.luisitorizado.connection.ConnectionFactory;
+import com.luisitorizado.connection.IDBConnection;
+import com.luisitorizado.utils.ReflectionUtils;
 
 public class EntityManager {
 
+    private IDBConnection conn;
+
+    public EntityManager(IDBConnection conn) {
+        this.conn = conn;
+        conn.connect();
+    }
+
     public <T> void insertOne(T entity) {
-        // Leer los campos de la entidad
+
+    }
+
+    public <T> String findAll(Class<T> entity, Object id) {
+        // Get all columns
+        List<String> columns = ReflectionUtils.getAllColumns(entity);
+        // Generate query
+        IO.println(columns.toString());
+        return columns.toString();
 
     }
 
     public <T> T findById(Class<T> entity, Object id) {
-        // Ojo: entity es ya la clase, no necesitas entity.getClass()
-        Table table = entity.getAnnotation(Table.class);
-        String tableName = table.name();
-
-        IO.println(entity.getDeclaredFields().toString());
-        for (Field field : entity.getDeclaredFields()) {
-            IO.println("Entro al ciclo!");
-            if (!field.isAnnotationPresent(Id.class)) {
-                Column columnId = field.getAnnotation(Column.class);
-                // Lógica de consulta (dummy)
-                String query = "SELECT * FROM " + tableName + " WHERE " + columnId.name() + " = " + id.toString();
-                IO.println(query);
-                break;
-            }
-        }
+        String idName = ReflectionUtils.getIdName(entity);
+        IO.println("Nombre del ID : " + idName);
 
         try {
-            // Crear instancia dummy de la entidad
             T dummy = entity.getDeclaredConstructor().newInstance();
             return dummy;
         } catch (Exception e) {
