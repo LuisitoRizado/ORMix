@@ -1,6 +1,9 @@
 package com.luisitorizado.core;
 
 import java.lang.reflect.Field;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.List;
 
 import com.luisitorizado.annotations.Column;
@@ -24,23 +27,31 @@ public class EntityManager {
     }
 
     public <T> String findAll(Class<T> entity, Object id) {
-        // Get all columns
         List<String> columns = ReflectionUtils.getAllColumns(entity);
-        // Generate query
+
         IO.println(columns.toString());
         return columns.toString();
 
     }
 
-    public <T> T findById(Class<T> entity, Object id) {
-        String idName = ReflectionUtils.getIdName(entity);
-        IO.println("Nombre del ID : " + idName);
-
+    public <T> boolean findById(Class<T> entity, Object id) {
         try {
-            T dummy = entity.getDeclaredConstructor().newInstance();
-            return dummy;
+
+            String idName = ReflectionUtils.getIdName(entity);
+            Connection connection = conn.connect();
+            Statement stmt = connection.createStatement();
+            String sql = "SELECT * FROM cajon";
+            ResultSet rs = stmt.executeQuery(sql);
+
+            while (rs.next()) {
+                IO.println(rs.getString("codigo"));
+                // Obtiene los datos de la consulta
+            }
+
+            return true;
         } catch (Exception e) {
-            throw new RuntimeException("No se pudo crear dummy de " + entity.getName(), e);
+            IO.println(e);
+            return false;
         }
     }
 }
